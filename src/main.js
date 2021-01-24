@@ -3,23 +3,23 @@ import "bootstrap";
 import "./style.css";
 
 window.onload = function() {
-  var who = [
-    "my perro",
-    "my abuela",
+  var quien = [
+    "mi perro",
+    "mi abuela",
     "mi gato",
     "naruto",
     "mi novia",
     "mi mama"
   ];
-  var what = [
+  var que = [
     "me obligo a ir con el doctor",
     "se comio mi tarrea",
     "me ataco",
-    "me olbigo a hacer de comer",
+    "me obligo a hacer de comer",
     "se enfermo",
     "se enojo conmigo"
   ];
-  var where = [
+  var donde = [
     "en mi casa",
     "en el cine",
     "en el supermecado",
@@ -29,17 +29,17 @@ window.onload = function() {
   ];
 
   var sentencia =
-    who[rand(who.length)] +
+    quien[aleatorio(quien.length)] +
     " " +
-    what[rand(what.length)] +
+    que[aleatorio(que.length)] +
     " " +
-    where[rand(where.length)];
+    donde[aleatorio(donde.length)];
 
-  let excuseSpan = document.querySelector("#excuse");
-  excuseSpan.innerHTML = sentencia;
+  let excusaSpan = document.querySelector("#excusa");
+  excusaSpan.innerHTML = sentencia;
 };
 
-function rand(length) {
-  let number = Math.floor(Math.random() * length);
-  return number;
+function aleatorio(length) {
+  let numero = Math.floor(Math.random() * length);
+  return numero;
 }
